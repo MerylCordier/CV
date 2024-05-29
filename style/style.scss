@@ -67,8 +67,8 @@ footer{
 // Styles pour la carte
 .card {
   position: relative;  
-  width: 230px;
-  height: 365px;  
+  width: 235px;
+  height: 370px;  
   margin: 12px;
   perspective: 1000px;
   
@@ -117,7 +117,7 @@ footer{
     &__back {     
       color: $blue-color;
       background-color: $beige-color;
-      border: 7px solid $blue-light-color;
+      border: 6px solid $blue-light-color;
       border-radius: 20px;
       
       //Animation du back
