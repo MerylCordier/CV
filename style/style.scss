@@ -83,7 +83,7 @@ footer{
     }
 
     &__front {
-      background-image: url('/style/fond-lignes-dynamiques-degradees_23-2149011966.jpg');
+      background-image: url('/style/image/fond-lignes-dynamiques-degradees_23-2149011966.jpg');
       background-size: cover;
       border: 6px solid $beige-color;
       
@@ -263,6 +263,10 @@ footer{
       &-item {
         font-size: 15px;
         margin-top: 6px;
+
+        & img{
+          max-height: 40px;
+        }
       }
     }
   }
