@@ -122,6 +122,7 @@ footer a {
   background-color: #f5f5dc;
   border: 6px solid #00bdd0;
   border-radius: 20px;
+  align-content: space-between;
 }
 .card__back.flip {
   transform: rotateY(-180deg);
@@ -158,7 +159,7 @@ footer a {
 }
 .card__back-content img {
   height: 40px;
-  margin: auto 45%;
+  margin: auto 65%;
 }
 .card__back-content a {
   font-size: 15px;
@@ -226,9 +227,6 @@ footer a {
   .card__back-content a {
     font-size: 17px;
     margin: 12px 6px 4px 10px;
-  }
-  .card__back-content img {
-    margin: auto 65%;
   }
   .card__back-image {
     width: 95px;
