@@ -1,30 +1,42 @@
 @keyframes wheelHueColor {
   from, to {
-    color: #c32283; }
+    color: hsl(324, 70%, 45%);
+  }
   10% {
-    color: #f45757; }
+    color: hsl(0, 88%, 65%);
+  }
   20% {
-    color: #cf8517; }
+    color: hsl(36, 80%, 45%);
+  }
   30% {
-    color: #819c16; }
+    color: hsl(72, 75%, 35%);
+  }
   40% {
-    color: #36931f; }
+    color: hsl(108, 65%, 35%);
+  }
   50% {
-    color: #169c4c; }
+    color: hsl(144, 75%, 35%);
+  }
   60% {
-    color: #169c9c; }
+    color: hsl(180, 75%, 35%);
+  }
   70% {
-    color: #2e65b8; }
+    color: hsl(216, 60%, 45%);
+  }
   80% {
-    color: #4e2dd2; }
+    color: hsl(252, 65%, 50%);
+  }
   90% {
-    color: #8b29a3; } }
+    color: hsl(288, 60%, 40%);
+  }
+}
 body {
   background-color: #1f2926;
   min-width: 100vw;
   min-height: 100vh;
   min-width: 320px;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 main {
   display: flex;
@@ -32,194 +44,239 @@ main {
   justify-content: center;
   min-height: 100%;
   min-width: 100%;
-  padding: 10px; }
+  padding: 10px;
+}
 
 h1 {
   text-align: center;
   font-size: 1.6rem;
-  color: #169c9c;
-  animation: wheelHueColor 15s infinite; }
+  color: hsl(180, 75%, 35%);
+  animation: wheelHueColor 15s infinite;
+}
 
 a {
   color: #0e3a69;
   text-decoration: none;
   font-size: 1.1rem;
-  font-weight: bold; }
-  a:hover {
-    color: #00bdd0;
-    zoom: 1.3; }
+  font-weight: bold;
+}
+a:hover {
+  color: #00bdd0;
+  zoom: 1.3;
+}
 
 footer {
   color: #f5f5dc;
   font-size: 1.2rem;
   margin-top: 10px;
-  text-align: center; }
-  footer a {
-    font-size: 1.6rem;
-    color: #f5f5dc; }
+  text-align: center;
+}
+footer a {
+  font-size: 1.6rem;
+  color: #f5f5dc;
+}
 
 .card {
   position: relative;
-  width: 240px;
+  width: 245px;
   height: 370px;
   margin: 12px;
-  perspective: 1000px; }
-  .card__front, .card__back {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    border-radius: 20px;
-    backface-visibility: hidden;
-    transition: transform 0.6s;
-    transform-style: preserve-3d; }
-  .card__front {
-    background-image: url("/style/image/fond-lignes-dynamiques-degradees_23-2149011966.jpg");
-    background-size: cover;
-    border: 6px solid #f5f5dc; }
-    .card__front.flip {
-      transform: rotateY(180deg); }
-    .card__front-title {
-      color: #0e3a69;
-      font-size: 1.4rem;
-      text-align: center;
-      align-content: center;
-      margin: 40% auto;
-      width: 170px;
-      height: 170px;
-      background-color: #f5f5dc;
-      background: radial-gradient(circle, #f5f5dc 50%, rgba(21, 159, 194, 0) 70%);
-      border-radius: 50%; }
-      .card__front-title:hover {
-        font-size: 1.9rem;
-        text-wrap: nowrap;
-        transition: 0.7s; }
-  .card__back {
-    color: #0e3a69;
-    background-color: #f5f5dc;
-    border: 6px solid #00bdd0;
-    border-radius: 20px; }
-    .card__back.flip {
-      transform: rotateY(-180deg); }
-    .card__back-image {
-      width: 75px;
-      height: 75px;
-      border-radius: 20px;
-      margin: 4px 0px 0px 30px;
-      opacity: 0.8; }
-    .card__back-title {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      font-size: 18px;
-      color: #0e3a69;
-      margin: 4px 0px 8px 0px; }
-    .card__back-subtitle {
-      font-size: 14px;
-      color: #0e3a69;
-      margin: 8px 0px 3px 4px; }
-    .card__back-content {
-      display: flex;
-      flex-wrap: wrap;
-      text-align: justify;
-      align-items: center;
-      color: #0e3a69;
-      font-size: 14px;
-      margin: 4px 6px 0px 6px; }
-      .card__back-content img {
-        height: 40px;
-        margin: auto 45%; }
-      .card__back-content a {
-        font-size: 15px;
-        font-weight: normal;
-        margin: 8px 6px 4px 6px; }
-        .card__back-content a:hover {
-          color: #00bdd0;
-          zoom: 1.2; }
-    .card__back-item {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      font-size: 13px;
-      font-weight: bold;
-      margin: 0px 0px 0px 6px; }
-      .card__back-item img {
-        width: 12%;
-        max-height: 35px;
-        margin-right: 8px; }
-      .card__back-item a {
-        font-size: 14px;
-        font-weight: normal;
-        margin: 0px 0px 0px 6px; }
-    .card__back .fa-solid, .card__back .fa-brands, .card__back .fas {
-      align-self: center;
-      color: #0e3a69;
-      font-size: 18px;
-      width: 18px;
-      height: 18px;
-      margin: 6px 2px 0px 2px; }
+  perspective: 1000px;
+}
+.card__front, .card__back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  backface-visibility: hidden;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+.card__front {
+  background-image: url("/style/image/fond-lignes-dynamiques-degradees_23-2149011966.jpg");
+  background-size: cover;
+  border: 6px solid #f5f5dc;
+}
+.card__front.flip {
+  transform: rotateY(180deg);
+}
+.card__front-title {
+  color: #0e3a69;
+  font-size: 1.4rem;
+  text-align: center;
+  align-content: center;
+  margin: 40% auto;
+  width: 170px;
+  height: 170px;
+  background-color: #f5f5dc;
+  background: radial-gradient(circle, #f5f5dc 50%, rgba(21, 159, 194, 0) 70%);
+  border-radius: 50%;
+}
+.card__front-title:hover {
+  font-size: 1.9rem;
+  text-wrap: nowrap;
+  transition: 0.7s;
+}
+.card__back {
+  color: #0e3a69;
+  background-color: #f5f5dc;
+  border: 6px solid #00bdd0;
+  border-radius: 20px;
+}
+.card__back.flip {
+  transform: rotateY(-180deg);
+}
+.card__back-image {
+  width: 75px;
+  height: 75px;
+  border-radius: 20px;
+  margin: 4px 0px 0px 30px;
+  opacity: 0.8;
+}
+.card__back-title {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: #0e3a69;
+  margin: 4px 0px 8px 0px;
+}
+.card__back-subtitle {
+  font-size: 14px;
+  color: #0e3a69;
+  margin: 6px 0px 3px 4px;
+}
+.card__back-content {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: justify;
+  align-items: center;
+  color: #0e3a69;
+  font-size: 14px;
+  margin: 4px 6px 0px 6px;
+}
+.card__back-content img {
+  height: 40px;
+  margin: auto 45%;
+}
+.card__back-content a {
+  font-size: 15px;
+  font-weight: normal;
+  margin: 8px 6px 4px 6px;
+}
+.card__back-content a:hover {
+  color: #00bdd0;
+  zoom: 1.2;
+}
+.card__back-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 13px;
+  font-weight: bold;
+  margin: 0px 0px 0px 6px;
+}
+.card__back-item img {
+  width: 12%;
+  max-height: 35px;
+  margin-right: 8px;
+}
+.card__back-item a {
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0px 0px 0px 6px;
+}
+.card__back .fa-solid, .card__back .fa-brands, .card__back .fas {
+  align-self: center;
+  color: #0e3a69;
+  font-size: 18px;
+  width: 18px;
+  height: 18px;
+  margin: 6px 2px 0px 2px;
+}
 
 @media screen and (min-width: 768px) {
   h1 {
-    font-size: 2.2rem; }
-
+    font-size: 2.2rem;
+  }
   .card {
     width: 260px;
-    height: 420px; }
-    .card__front-title {
-      font-size: 1.8rem;
-      font-weight: bold;
-      width: 210px;
-      height: 210px; }
-      .card__front-title:hover {
-        font-size: 2.3rem; }
-    .card__back-title {
-      font-size: 22px; }
-    .card__back-subtitle {
-      font-size: 18px;
-      margin-top: 18px; }
-    .card__back-content {
-      font-size: 16px; }
-      .card__back-content a {
-        font-size: 17px;
-        margin: 12px 6px 4px 10px; }
-      .card__back-content img {
-        margin: auto 65%; }
-    .card__back-image {
-      width: 95px;
-      height: 95px; }
-    .card__back-item {
-      font-size: 15px;
-      margin-top: 6px; }
-      .card__back-item img {
-        max-height: 40px; } }
+    height: 420px;
+  }
+  .card__front-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    width: 210px;
+    height: 210px;
+  }
+  .card__front-title:hover {
+    font-size: 2.3rem;
+  }
+  .card__back-title {
+    font-size: 22px;
+  }
+  .card__back-subtitle {
+    font-size: 18px;
+    margin-top: 18px;
+  }
+  .card__back-content {
+    font-size: 16px;
+  }
+  .card__back-content a {
+    font-size: 17px;
+    margin: 12px 6px 4px 10px;
+  }
+  .card__back-content img {
+    margin: auto 65%;
+  }
+  .card__back-image {
+    width: 95px;
+    height: 95px;
+  }
+  .card__back-item {
+    font-size: 15px;
+    margin-top: 6px;
+  }
+  .card__back-item img {
+    max-height: 40px;
+  }
+}
 @media screen and (min-width: 1024px) {
   h1 {
-    font-size: 2.7rem; }
-
+    font-size: 2.7rem;
+  }
   .card {
     width: 300px;
-    height: 450px; }
-    .card__front-title {
-      margin-top: 35%;
-      width: 240px;
-      height: 240px; }
-    .card__back-title {
-      font-size: 24px; }
-    .card__back-content {
-      font-size: 17px; }
-      .card__back-content a {
-        font-size: 18px;
-        margin: 18px 6px 4px 14px; }
-      .card__back-content .fa-solid, .card__back-content .fa-brands, .card__back-content .fas {
-        font-size: 22px; }
-      .card__back-content img {
-        margin: auto 80%; }
-    .card__back-item {
-      font-size: 16px;
-      margin-top: 15px; }
-      .card__back-item img {
-        width: 10%;
-        margin-right: 10px; } }
-
-/*# sourceMappingURL=style.css.map */
+    height: 450px;
+  }
+  .card__front-title {
+    margin-top: 35%;
+    width: 240px;
+    height: 240px;
+  }
+  .card__back-title {
+    font-size: 24px;
+  }
+  .card__back-content {
+    font-size: 17px;
+  }
+  .card__back-content a {
+    font-size: 18px;
+    margin: 18px 6px 4px 14px;
+  }
+  .card__back-content .fa-solid, .card__back-content .fa-brands, .card__back-content .fas {
+    font-size: 22px;
+  }
+  .card__back-content img {
+    margin: auto 80%;
+  }
+  .card__back-item {
+    font-size: 16px;
+    margin-top: 15px;
+  }
+  .card__back-item img {
+    width: 10%;
+    margin-right: 10px;
+  }
+}/*# sourceMappingURL=style.css.map */

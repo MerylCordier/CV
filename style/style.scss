@@ -67,7 +67,7 @@ footer{
 // Styles pour la carte
 .card {
   position: relative;  
-  width: 240px;
+  width: 245px;
   height: 370px;  
   margin: 12px;
   perspective: 1000px;
@@ -147,7 +147,7 @@ footer{
         &-subtitle {
           font-size: 14px;
           color: $blue-color;
-          margin: 8px 0px 3px 4px;
+          margin: 6px 0px 3px 4px;
         }
         
         // Contenu du back
