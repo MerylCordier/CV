@@ -1,0 +1,9 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Cordier;Meryl;;;
+FN:Meryl Cordier
+TITLE:développeur web et web mobile
+TEL;TYPE=CELL,VOICE:+330670702703
+EMAIL;TYPE=PREF,INTERNET:merylcordier@gmail.com
+ADR;TYPE=HOME:;;Amiens;France
+END:VCARD
