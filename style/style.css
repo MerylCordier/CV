@@ -44,7 +44,6 @@ main {
   justify-content: center;
   min-height: 100%;
   min-width: 100%;
-  padding: 10px;
 }
 
 h1 {
@@ -62,7 +61,11 @@ a {
 }
 a:hover {
   color: #00bdd0;
-  zoom: 1.3;
+  font-size: 1.3rem;
+  transition: 0.6s;
+}
+a:not(:hover) {
+  transition: 0.6s;
 }
 
 footer {
@@ -75,19 +78,29 @@ footer a {
   font-size: 1.6rem;
   color: #f5f5dc;
 }
+footer a:hover {
+  color: #00bdd0;
+  font-size: 1.8rem;
+  transition: 0.6s;
+}
+footer a:not(:hover) {
+  transition: 0.6s;
+}
 
 .card {
   position: relative;
   width: 250px;
   height: 375px;
-  margin: 12px;
+  margin: 20px;
   perspective: 1000px;
 }
 .card__front, .card__back {
   position: absolute;
   height: 100%;
   width: 100%;
+  border: 6px solid;
   border-radius: 20px;
+  padding: 6px;
   backface-visibility: hidden;
   transition: transform 0.6s;
   transform-style: preserve-3d;
@@ -95,7 +108,7 @@ footer a {
 .card__front {
   background-image: url("/style/image/fond-lignes-dynamiques-degradees_23-2149011966.jpg");
   background-size: cover;
-  border: 6px solid #f5f5dc;
+  border-color: #f5f5dc;
 }
 .card__front.flip {
   transform: rotateY(180deg);
@@ -113,16 +126,18 @@ footer a {
   border-radius: 50%;
 }
 .card__front-title:hover {
-  font-size: 1.9rem;
+  font-size: 1.7rem;
   text-wrap: nowrap;
-  transition: 0.7s;
+  transition: 0.4s;
+}
+.card__front-title:not(:hover) {
+  transition: 0.4s;
 }
 .card__back {
   color: #0e3a69;
   background-color: #f5f5dc;
-  border: 6px solid #00bdd0;
-  border-radius: 20px;
-  align-content: space-between;
+  border-color: #00bdd0;
+  align-content: space-around;
 }
 .card__back.flip {
   transform: rotateY(-180deg);
@@ -141,7 +156,7 @@ footer a {
   align-items: center;
   font-size: 18px;
   color: #0e3a69;
-  margin: 4px 0px 8px 0px;
+  margin: 4px 0px 10 0px;
 }
 .card__back-subtitle {
   font-size: 14px;
@@ -168,7 +183,11 @@ footer a {
 }
 .card__back-content a:hover {
   color: #00bdd0;
-  zoom: 1.2;
+  font-size: 17px;
+  transition: 0.6s;
+}
+.card__back-content a:not(:hover) {
+  transition: 0.6s;
 }
 .card__back-item {
   display: flex;
@@ -181,7 +200,7 @@ footer a {
 .card__back-item img {
   width: 12%;
   max-height: 35px;
-  margin-right: 8px;
+  margin: 4px 8px 0px 0px;
 }
 .card__back-item a {
   font-size: 14px;
@@ -202,8 +221,8 @@ footer a {
     font-size: 2.2rem;
   }
   .card {
-    width: 260px;
-    height: 420px;
+    width: 275px;
+    height: 450px;
   }
   .card__front-title {
     font-size: 1.8rem;
@@ -245,8 +264,8 @@ footer a {
     font-size: 2.7rem;
   }
   .card {
-    width: 300px;
-    height: 450px;
+    width: 310px;
+    height: 490px;
   }
   .card__front-title {
     margin-top: 35%;
@@ -260,8 +279,15 @@ footer a {
     font-size: 17px;
   }
   .card__back-content a {
-    font-size: 18px;
+    font-size: 20px;
     margin: 18px 6px 4px 14px;
+  }
+  .card__back-content:hover {
+    font-size: 22px;
+    transition: 0.6s;
+  }
+  .card__back-content:not(:hover) {
+    transition: 0.6s;
   }
   .card__back-content .fa-solid, .card__back-content .fa-brands, .card__back-content .fas {
     font-size: 22px;
@@ -276,5 +302,16 @@ footer a {
   .card__back-item img {
     width: 10%;
     margin-right: 10px;
+  }
+  .card__back-item a {
+    font-size: 18px;
+    margin: 0px 0px 0px 10px;
+  }
+  .card__back-item:hover {
+    font-size: 20px;
+    transition: 0.6s;
+  }
+  .card__back-item:not(:hover) {
+    transition: 0.6s;
   }
 }/*# sourceMappingURL=style.css.map */
