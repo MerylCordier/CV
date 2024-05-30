@@ -157,7 +157,7 @@ footer{
           align-items: center;
           font-size: 18px;
           color: $blue-color;
-          margin: 4px 0px 10 0px; 
+          margin-top: 0px;
         }
         
         &-subtitle {
@@ -350,7 +350,7 @@ footer{
         &:not(:hover){
           transition: 0.6s;
         }
-        
+
       }
     }
   }

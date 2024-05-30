@@ -156,7 +156,7 @@ footer a:not(:hover) {
   align-items: center;
   font-size: 18px;
   color: #0e3a69;
-  margin: 4px 0px 10 0px;
+  margin-top: 0px;
 }
 .card__back-subtitle {
   font-size: 14px;
