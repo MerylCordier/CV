@@ -282,11 +282,11 @@ footer a:not(:hover) {
     font-size: 20px;
     margin: 18px 6px 4px 14px;
   }
-  .card__back-content:hover {
+  .card__back-content a:hover {
     font-size: 22px;
     transition: 0.6s;
   }
-  .card__back-content:not(:hover) {
+  .card__back-content a:not(:hover) {
     transition: 0.6s;
   }
   .card__back-content .fa-solid, .card__back-content .fa-brands, .card__back-content .fas {
@@ -307,11 +307,14 @@ footer a:not(:hover) {
     font-size: 18px;
     margin: 0px 0px 0px 10px;
   }
-  .card__back-item:hover {
+  .card__back-item a:hover {
     font-size: 20px;
     transition: 0.6s;
   }
-  .card__back-item:not(:hover) {
+  .card__back-item a:not(:hover) {
     transition: 0.6s;
+  }
+  footer {
+    font-size: 1.7rem;
   }
 }/*# sourceMappingURL=style.css.map */
