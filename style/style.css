@@ -143,11 +143,10 @@ footer a:not(:hover) {
   transform: rotateY(-180deg);
 }
 .card__back-image {
-  width: 75px;
-  height: 75px;
+  width: 80px;
+  height: 80px;
   border-radius: 20px;
   margin: 4px 0px 0px 30px;
-  opacity: 0.8;
 }
 .card__back-title {
   display: flex;
@@ -207,7 +206,9 @@ footer a:not(:hover) {
   font-weight: normal;
   margin: 0px 0px 0px 6px;
 }
-.card__back .fa-solid, .card__back .fa-brands, .card__back .fas {
+.card__back .fa-solid,
+.card__back .fa-brands,
+.card__back .fas {
   align-self: center;
   color: #0e3a69;
   font-size: 18px;
@@ -289,7 +290,9 @@ footer a:not(:hover) {
   .card__back-content a:not(:hover) {
     transition: 0.6s;
   }
-  .card__back-content .fa-solid, .card__back-content .fa-brands, .card__back-content .fas {
+  .card__back-content .fa-solid,
+  .card__back-content .fa-brands,
+  .card__back-content .fas {
     font-size: 22px;
   }
   .card__back-content img {

@@ -5,16 +5,37 @@ $blue-light-color: #00bdd0;
 $grey-color: #1f2926;
 
 @keyframes wheelHueColor {
-  from, to { color: hsl(324, 70%, 45%); }
-  10%      { color: hsl(0, 88%, 65%); }
-  20%      { color: hsl( 36, 80%, 45%); }
-  30%      { color: hsl( 72, 75%, 35%); }
-  40%      { color: hsl(108, 65%, 35%); }
-  50%      { color: hsl(144, 75%, 35%); }
-  60%      { color: hsl(180, 75%, 35%); }
-  70%      { color: hsl(216, 60%, 45%); }
-  80%      { color: hsl(252, 65%, 50%); }
-  90%      { color: hsl(288, 60%, 40%); }
+  from,
+  to {
+    color: hsl(324, 70%, 45%);
+  }
+  10% {
+    color: hsl(0, 88%, 65%);
+  }
+  20% {
+    color: hsl(36, 80%, 45%);
+  }
+  30% {
+    color: hsl(72, 75%, 35%);
+  }
+  40% {
+    color: hsl(108, 65%, 35%);
+  }
+  50% {
+    color: hsl(144, 75%, 35%);
+  }
+  60% {
+    color: hsl(180, 75%, 35%);
+  }
+  70% {
+    color: hsl(216, 60%, 45%);
+  }
+  80% {
+    color: hsl(252, 65%, 50%);
+  }
+  90% {
+    color: hsl(288, 60%, 40%);
+  }
 }
 
 body {
@@ -42,21 +63,21 @@ h1 {
 
 a {
   color: $blue-color;
-  text-decoration:none;
+  text-decoration: none;
   font-size: 1.1rem;
   font-weight: bold;
-   
+
   &:hover {
     color: $blue-light-color;
     font-size: 1.3rem;
     transition: 0.6s;
   }
-  &:not(:hover){
+  &:not(:hover) {
     transition: 0.6s;
   }
 }
 
-footer{
+footer {
   color: $beige-color;
   font-size: 1.2rem;
   margin-top: 10px;
@@ -69,7 +90,7 @@ footer{
       font-size: 1.8rem;
       transition: 0.6s;
     }
-    &:not(:hover){
+    &:not(:hover) {
       transition: 0.6s;
     }
   }
@@ -77,181 +98,185 @@ footer{
 
 // Styles pour la carte
 .card {
-  position: relative;  
+  position: relative;
   width: 250px;
-  height: 375px;  
-  margin: 20px;  
+  height: 375px;
+  margin: 20px;
   perspective: 1000px;
-  
-    &__front, &__back {
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      border: 6px solid;
-      border-radius: 20px;
-      padding: 6px;      
-      backface-visibility: hidden;    
-      transition: transform 0.6s;
-      transform-style: preserve-3d;
+
+  &__front,
+  &__back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border: 6px solid;
+    border-radius: 20px;
+    padding: 6px;
+    backface-visibility: hidden;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+
+  &__front {
+    background-image: url("/style/image/fond-lignes-dynamiques-degradees_23-2149011966.jpg");
+    background-size: cover;
+    border-color: $beige-color;
+
+    //animation du front
+    &.flip {
+      transform: rotateY(180deg);
     }
 
-    &__front {
-      background-image: url('/style/image/fond-lignes-dynamiques-degradees_23-2149011966.jpg');
-      background-size: cover;
-      border-color: $beige-color;
-      
-      //animation du front
-      &.flip {
-        transform: rotateY(180deg);
-      } 
-      
-      //Titre du front
-      &-title {
-        color: $blue-color;
-        font-size: 1.4rem;        
-        text-align: center;
-        align-content: center;  
-        margin: 40% auto;
-        width: 170px; 
-        height: 170px; 
-        background-color: $beige-color;
-        background: radial-gradient(circle, $beige-color 50%, rgba(21, 159, 194, 0) 70%);
-        border-radius: 50%;
-        
-        &:hover {
-          font-size: 1.7rem;
-          text-wrap:nowrap;
-          transition: 0.4s;          
-        }
-        &:not(:hover){
-          transition: 0.4s;
-        }        
+    //Titre du front
+    &-title {
+      color: $blue-color;
+      font-size: 1.4rem;
+      text-align: center;
+      align-content: center;
+      margin: 40% auto;
+      width: 170px;
+      height: 170px;
+      background-color: $beige-color;
+      background: radial-gradient(
+        circle,
+        $beige-color 50%,
+        rgba(21, 159, 194, 0) 70%
+      );
+      border-radius: 50%;
+
+      &:hover {
+        font-size: 1.7rem;
+        text-wrap: nowrap;
+        transition: 0.4s;
+      }
+      &:not(:hover) {
+        transition: 0.4s;
       }
     }
-    
-    // Back de la carte
-    &__back {     
-      color: $blue-color;
-      background-color: $beige-color;
-      border-color: $blue-light-color;
-      align-content:space-around;
-      
-      //Animation du back
-        &.flip {   
-          transform: rotateY(-180deg);
-        }
-          
-        &-image {
-          width: 75px;
-          height: 75px;
-          border-radius: 20px;
-          margin: 4px 0px 0px 30px;
-          opacity: 0.8;
-        }
+  }
 
-        // Titres du back
-        &-title {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
-          align-items: center;
-          font-size: 18px;
-          color: $blue-color;
-          margin-top: 0px;
-        }
-        
-        &-subtitle {
-          font-size: 14px;
-          color: $blue-color;
-          margin: 6px 0px 3px 4px;
-        }
-        
-        // Contenu du back
-        &-content {
-          display:flex;
-          flex-wrap: wrap;
-          text-align: justify;
-          align-items: center;
-          color: $blue-color;
-          font-size: 14px;
-          margin: 4px 6px 0px 6px;
+  // Back de la carte
+  &__back {
+    color: $blue-color;
+    background-color: $beige-color;
+    border-color: $blue-light-color;
+    align-content: space-around;
 
-          & img {
-          height: 40px;
-          margin: auto 65%;            
-          }
-
-          & a {        
-            font-size: 15px;
-            font-weight:normal;
-            margin: 8px 6px 4px 6px;
-            
-            &:hover {
-              color: $blue-light-color;
-              font-size: 17px;
-              transition: 0.6s;
-            }
-            &:not(:hover){
-              transition: 0.6s;
-            }
-          }
-        }
-
-        &-item {
-          display: flex; 
-          flex-direction: row;
-          align-items: center;
-          font-size: 13px;
-          font-weight: bold;
-          margin: 0px 0px 0px 6px;
-          
-          & img {
-            width: 12%;
-            max-height: 35px;
-            margin: 4px 8px 0px 0px;
-          }
-
-          & a {
-            font-size: 14px;
-            font-weight: normal;
-            margin: 0px 0px 0px 6px;
-          }
-        }
-
-        & .fa-solid, .fa-brands, .fas {
-          align-self:center;
-          color: $blue-color;
-          font-size: 18px;
-          width: 18px;
-          height: 18px;
-          margin: 6px 2px 0px 2px;          
-        }
+    //Animation du back
+    &.flip {
+      transform: rotateY(-180deg);
     }
+
+    &-image {
+      width: 80px;
+      height: 80px;
+      border-radius: 20px;
+      margin: 4px 0px 0px 30px;
+    }
+
+    // Titres du back
+    &-title {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      font-size: 18px;
+      color: $blue-color;
+      margin-top: 0px;
+    }
+
+    &-subtitle {
+      font-size: 14px;
+      color: $blue-color;
+      margin: 6px 0px 3px 4px;
+    }
+
+    // Contenu du back
+    &-content {
+      display: flex;
+      flex-wrap: wrap;
+      text-align: justify;
+      align-items: center;
+      color: $blue-color;
+      font-size: 14px;
+      margin: 4px 6px 0px 6px;
+
+      & img {
+        height: 40px;
+        margin: auto 65%;
+      }
+
+      & a {
+        font-size: 15px;
+        font-weight: normal;
+        margin: 8px 6px 4px 6px;
+
+        &:hover {
+          color: $blue-light-color;
+          font-size: 17px;
+          transition: 0.6s;
+        }
+        &:not(:hover) {
+          transition: 0.6s;
+        }
+      }
+    }
+
+    &-item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      font-size: 13px;
+      font-weight: bold;
+      margin: 0px 0px 0px 6px;
+
+      & img {
+        width: 12%;
+        max-height: 35px;
+        margin: 4px 8px 0px 0px;
+      }
+
+      & a {
+        font-size: 14px;
+        font-weight: normal;
+        margin: 0px 0px 0px 6px;
+      }
+    }
+
+    & .fa-solid,
+    .fa-brands,
+    .fas {
+      align-self: center;
+      color: $blue-color;
+      font-size: 18px;
+      width: 18px;
+      height: 18px;
+      margin: 6px 2px 0px 2px;
+    }
+  }
 }
 
 @media screen and (min-width: 768px) {
-  
-  h1{
+  h1 {
     font-size: 2.2rem;
   }
 
-  .card {     
+  .card {
     width: 275px;
-    height: 450px; 
+    height: 450px;
 
-    &__front-title {    
-    font-size: 1.8rem;
-    font-weight: bold;
-    width: 210px;
-    height: 210px;
+    &__front-title {
+      font-size: 1.8rem;
+      font-weight: bold;
+      width: 210px;
+      height: 210px;
 
       &:hover {
-        font-size: 2.3rem;      
+        font-size: 2.3rem;
       }
     }
 
-    &__back{
-
+    &__back {
       &-title {
         font-size: 22px;
       }
@@ -263,10 +288,10 @@ footer{
 
       &-content {
         font-size: 16px;
-      
+
         & a {
           font-size: 17px;
-          margin: 12px 6px 4px 10px;   
+          margin: 12px 6px 4px 10px;
         }
       }
 
@@ -279,7 +304,7 @@ footer{
         font-size: 15px;
         margin-top: 6px;
 
-        & img{
+        & img {
           max-height: 40px;
         }
       }
@@ -287,45 +312,45 @@ footer{
   }
 }
 
-@media screen and (min-width: 1024px){
- 
-  h1{
+@media screen and (min-width: 1024px) {
+  h1 {
     font-size: 2.7rem;
   }
 
-  .card {     
+  .card {
     width: 310px;
-    height: 490px; 
+    height: 490px;
 
-    &__front-title {    
+    &__front-title {
       margin-top: 35%;
       width: 240px;
       height: 240px;
     }
 
-    &__back{
+    &__back {
       &-title {
         font-size: 24px;
       }
-      
+
       &-content {
         font-size: 17px;
-    
+
         & a {
           font-size: 20px;
-          margin: 18px 6px 4px 14px;   
+          margin: 18px 6px 4px 14px;
 
-          &:hover{
+          &:hover {
             font-size: 22px;
             transition: 0.6s;
           }
-          &:not(:hover){
+          &:not(:hover) {
             transition: 0.6s;
           }
         }
-        
 
-        & .fa-solid, .fa-brands, .fas {
+        & .fa-solid,
+        .fa-brands,
+        .fas {
           font-size: 22px;
         }
 
@@ -333,7 +358,7 @@ footer{
           margin: auto 80%;
         }
       }
-      
+
       &-item {
         font-size: 16px;
         margin-top: 15px;
@@ -345,16 +370,14 @@ footer{
           font-size: 18px;
           margin: 0px 0px 0px 10px;
 
-          &:hover{
+          &:hover {
             font-size: 20px;
             transition: 0.6s;
           }
-          &:not(:hover){
+          &:not(:hover) {
             transition: 0.6s;
           }
         }
-        
-
       }
     }
   }
